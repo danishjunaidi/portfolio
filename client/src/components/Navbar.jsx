@@ -31,7 +31,7 @@ export default function Navbar() {
           className="text-2xl font-bold bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent"
           whileHover={{ scale: 1.05 }}
         >
-          MDJ.
+          Danish
         </motion.div>
 
         {/* Desktop Menu */}
