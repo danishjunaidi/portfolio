@@ -21,17 +21,23 @@ export default function Footer() {
 
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.1 }}>
             <h3 className="text-xl font-bold mb-4">Follow</h3>
-            <div className="flex gap-4">
-              <a href="#" className="hover:text-accent transition">Twitter</a>
-              <a href="#" className="hover:text-accent transition">LinkedIn</a>
-              <a href="#" className="hover:text-accent transition">GitHub</a>
+            <div className="flex gap-4 text-2xl">
+              <a href={contactInfo.github} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition" title="GitHub">
+                <FaGithub />
+              </a>
+              <a href={contactInfo.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition" title="LinkedIn">
+                <FaLinkedin />
+              </a>
+              <a href={`mailto:${contactInfo.email}`} className="hover:text-accent transition" title="Email">
+                <FaEnvelope />
+              </a>
             </div>
           </motion.div>
 
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.2 }}>
             <h3 className="text-xl font-bold mb-4">Contact</h3>
-            <p className="text-gray-400">Email: contact@example.com</p>
-            <p className="text-gray-400">Location: Your City</p>
+            <p className="text-gray-400">Email: {contactInfo.email}</p>
+            <p className="text-gray-400">Phone: {contactInfo.phone}</p>
           </motion.div>
         </div>
 
