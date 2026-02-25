@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: danish-portfolio
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: CORS_ORIGIN
+        value: "*"
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000

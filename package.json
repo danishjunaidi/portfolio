@@ -1,0 +1,26 @@
+{
+  "name": "danish-portfolio",
+  "version": "1.0.0",
+  "description": "Mohammad Danish Junaidi - Full Stack Developer Portfolio",
+  "type": "module",
+  "main": "server/server.js",
+  "scripts": {
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "build": "node build-prod.js",
+    "start": "cd server && node server.js",
+    "dev": "concurrently \"cd client && npm run dev\" \"cd server && npm run dev\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
