@@ -1,6 +1,5 @@
 import nodemailer from 'nodemailer';
 
-// Configure nodemailer (you'll need to set up email credentials)
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -17,7 +16,6 @@ export const sendContactEmail = async (req, res) => {
       return res.status(400).json({ message: 'All fields are required' });
     }
 
-    // Email to you
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
@@ -33,10 +31,8 @@ export const sendContactEmail = async (req, res) => {
       replyTo: email,
     };
 
-    // Send email
     await transporter.sendMail(mailOptions);
 
-    // Send confirmation email to user
     const confirmationEmail = {
       from: process.env.EMAIL_USER,
       to: email,
