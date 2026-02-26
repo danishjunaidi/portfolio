@@ -27,7 +27,6 @@ export default function Hero() {
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-      {/* Animated Background */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-secondary rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-accent rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
@@ -35,7 +34,6 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* Left Content */}
         <motion.div
           className="space-y-6"
           variants={containerVariants}
@@ -81,7 +79,6 @@ export default function Hero() {
             </motion.a>
           </motion.div>
 
-          {/* Social Links */}
           <motion.div variants={itemVariants} className="flex gap-6 pt-4">
             <motion.a
               href="https://github.com/danishjunaidi"
@@ -111,7 +108,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Right - Image/Profile */}
         <motion.div
           className="flex justify-center items-center"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -121,7 +117,6 @@ export default function Hero() {
           onMouseLeave={() => setIsHovered(false)}
         >
           <div className="relative">
-            {/* Animated Border */}
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-accent via-secondary to-accent rounded-2xl p-1"
               animate={isHovered ? { rotate: 360 } : { rotate: 0 }}
@@ -130,18 +125,14 @@ export default function Hero() {
               <div className="bg-dark rounded-2xl inset-0"></div>
             </motion.div>
 
-            {/* Profile Image Placeholder */}
             <div className="relative w-96 h-96 rounded-2xl overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-secondary/30 to-accent/30 flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="text-8xl">🧠</div>
-                  <p className="text-xl font-semibold text-accent">Your Profile Image Here</p>
-                  <p className="text-sm text-gray-400">Replace with your professional photo</p>
-                </div>
-              </div>
+              <img 
+                src="/profile.jpg" 
+                alt="Profile" 
+                className="w-full h-full object-cover"
+              />
             </div>
 
-            {/* Floating Badge */}
             <motion.div
               className="absolute -bottom-4 -right-4 bg-secondary px-6 py-3 rounded-full shadow-lg glass"
               animate={{ y: [0, -10, 0] }}
@@ -153,7 +144,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
       <motion.div
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}

@@ -26,7 +26,6 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      // For now, just log to console since backend is optional
       console.log('Form submitted:', formData);
       setSubmitMessage('Message sent successfully! I\'ll get back to you soon.');
       setTimeout(() => {
@@ -44,7 +43,6 @@ export default function Contact() {
     <section id="contact" className="py-20 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div ref={ref}>
-          {/* Section Title */}
           <motion.div
             className="text-center space-y-4 mb-16"
             initial={{ opacity: 0 }}
@@ -69,7 +67,6 @@ export default function Contact() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-            {/* Contact Info */}
             <motion.div
               className="space-y-8"
               initial={{ x: -50, opacity: 0 }}
@@ -105,7 +102,7 @@ export default function Contact() {
                 </motion.a>
               ))}
 
-              {/* Social Links */}
+
               <div className="space-y-4">
                 <p className="text-gray-400">Follow me on social media</p>
                 <div className="flex gap-4">
@@ -131,7 +128,6 @@ export default function Contact() {
               </div>
             </motion.div>
 
-            {/* Contact Form */}
             <motion.form
               onSubmit={handleSubmit}
               className="glass p-8 rounded-xl space-y-6"

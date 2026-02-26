@@ -34,7 +34,6 @@ export default function Navbar() {
           Danish
         </motion.div>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 items-center">
           {navItems.map((item) => (
             <motion.a
@@ -48,7 +47,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
+
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -61,7 +60,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <motion.div
           className="md:hidden glass border-t border-secondary/30"

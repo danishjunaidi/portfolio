@@ -33,7 +33,6 @@ export default function FullStackProjects() {
     <section id="projects" className="py-20 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div ref={ref}>
-          {/* Section Title */}
           <motion.div
             className="text-center space-y-4 mb-16"
             initial={{ opacity: 0 }}
@@ -58,7 +57,6 @@ export default function FullStackProjects() {
             </p>
           </motion.div>
 
-          {/* Projects Grid */}
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 gap-8"
             variants={containerVariants}
@@ -72,7 +70,6 @@ export default function FullStackProjects() {
                 className="glass rounded-xl overflow-hidden hover:border-accent/50 transition-all group"
                 whileHover={{ y: -10 }}
               >
-                {/* Project Image */}
                 <div className="relative h-64 overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
                   <div className="w-full h-full flex items-center justify-center text-6xl">
                     🏗️
@@ -80,7 +77,6 @@ export default function FullStackProjects() {
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
                 </div>
 
-                {/* Project Content */}
                 <div className="p-6 space-y-4">
                   <h3 className="text-xl font-bold text-accent group-hover:text-secondary transition">
                     {project.title}
@@ -90,7 +86,6 @@ export default function FullStackProjects() {
                     {project.description}
                   </p>
 
-                  {/* Metrics */}
                   <div className="grid grid-cols-2 gap-3 py-4 border-t border-secondary/20">
                     {Object.entries(project.metrics).map(([key, value]) => (
                       <div key={key}>
@@ -100,7 +95,6 @@ export default function FullStackProjects() {
                     ))}
                   </div>
 
-                  {/* Tech Stack */}
                   <div className="space-y-2">
                     <p className="text-xs text-gray-400">Tech Stack</p>
                     <div className="flex flex-wrap gap-2">
@@ -115,7 +109,6 @@ export default function FullStackProjects() {
                     </div>
                   </div>
 
-                  {/* Links */}
                   <div className="flex gap-3 pt-4">
                     <motion.a
                       href={project.github}

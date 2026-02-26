@@ -31,7 +31,6 @@ export default function Certificates() {
     <section id="certificates" className="py-20 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div ref={ref}>
-          {/* Section Title */}
           <motion.div
             className="text-center space-y-4 mb-16"
             initial={{ opacity: 0 }}
@@ -55,7 +54,6 @@ export default function Certificates() {
             </p>
           </motion.div>
 
-          {/* Certificates Grid */}
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 gap-6"
             variants={containerVariants}
@@ -87,7 +85,6 @@ export default function Certificates() {
             ))}
           </motion.div>
 
-          {/* Training Programs */}
           <motion.div
             className="mt-16"
             initial={{ y: 40, opacity: 0 }}

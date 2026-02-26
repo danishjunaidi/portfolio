@@ -21,7 +21,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -38,7 +37,6 @@ html {
   @apply bg-accent;
 }
 
-/* Animated gradient background */
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
@@ -57,7 +55,6 @@ html {
   animation: gradientShift 15s ease infinite;
 }
 
-/* Glass morphism effect */
 .glass {
   background: rgba(15, 23, 42, 0.8);
   backdrop-filter: blur(10px);
