@@ -6,7 +6,7 @@
   "main": "server/server.js",
   "scripts": {
     "install-all": "npm install && cd client && npm install && cd ../server && npm install",
-    "build": "node build-prod.js",
+    "build": "npm install && node build-prod.js",
     "start": "cd server && node server.js",
     "dev": "concurrently \"cd client && npm run dev\" \"cd server && npm run dev\"",
     "dev:client": "cd client && npm run dev",

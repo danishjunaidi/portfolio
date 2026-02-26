@@ -3,7 +3,7 @@ services:
     name: danish-portfolio
     env: node
     plan: free
-    buildCommand: npm install && npm run build
+    buildCommand: npm run build
     startCommand: npm start
     envVars:
       - key: CORS_ORIGIN

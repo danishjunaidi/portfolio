@@ -8,6 +8,16 @@ console.log('🔨 Building Danish Portfolio for Production...');
 console.log(`📍 Project root: ${__dirname}`);
 
 try {
+  // Install root dependencies
+  console.log('\n📦 Installing root dependencies...');
+  execSync('npm install --prefer-offline --no-audit', { stdio: 'inherit' });
+  
+  // Install server dependencies
+  console.log('\n📦 Installing server dependencies...');
+  const serverPath = path.join(__dirname, 'server');
+  process.chdir(serverPath);
+  execSync('npm install --prefer-offline --no-audit', { stdio: 'inherit' });
+  
   // Build client
   console.log('\n🎨 Building React frontend...');
   const clientPath = path.join(__dirname, 'client');
